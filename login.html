@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录注册界面</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.24.0/axios.js"></script>
+  <body>
+    <div class="biggest">
+      <!-- 翻转体 -->
+      <div class="turn">
+        <div class="over">
+          <!-- 正面登录界面 -->
+          <form action="" class="login">
+            <h1>
+              <img
+                src="https://s4.ax1x.com/2022/01/22/7hZytS.png"
+                width="20%"
+                height="20%"
+                title="TUT-SIPC"
+                alt="SIPC"
+              />
+            </h1>
+            <input type="text" placeholder="用户名" id="User2" class="in" />
+            <input type="password" placeholder="密码" id="Pas2" class="in" />
+            <input type="button" class="btn btn1" value="登 录" id="enter" />
+          </form>
+
+          <!-- 背面注册界面 -->
+          <form action="" class="sign">
+            <h1>
+              <img
+                src="https://s4.ax1x.com/2022/01/22/7hZytS.png"
+                width="70"
+                height="70"
+                title="TUT-SIPC"
+                alt="SIPC"
+              />
+            </h1>
+            <input type="text" placeholder="用户名" id="User1" class="in" />
+            <input type="password" placeholder="密码" id="Pas1" class="in" />
+            <input type="button" class="btn btn1" value="注 册" id="join" />
+          </form>
+        </div>
+      </div>
+
+      <!-- 切换按钮框 -->
+      <div class="switch">
+        <h2>注 册</h2>
+        <button id="change" class="btn">切 换</button>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

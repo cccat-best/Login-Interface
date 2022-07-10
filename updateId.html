@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>updateId</title>
+  </head>
+  <style>
+    .big {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    input {
+      outline: none;
+      width: 242px;
+      height: 37px;
+      border-color: pink;
+      border-width: 4px;
+      border-radius: 16px;
+      background-color: white;
+      color: slategrey;
+      font-size: 18px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+    #btn {
+      cursor: pointer;
+      outline: 0;
+      height: 47px;
+      width: 142px;
+      border-radius: 16px;
+      border-width: 4px;
+      background-color: pink;
+      border-color: pink;
+      color: grey;
+      font-size: 18px;
+      opacity: 0.8;
+      transform: translateX(50px);
+    }
+    #btn:focus {
+      outline: 0;
+    }
+  </style>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <body>
+    <div class="big">
+      <input type="text" placeholder="请输入你的用户名" class="name" />
+      <br />
+      <input type="number" placeholder="请输入你的学号" class="num" />
+      <br />
+      <button id="btn">更新学号</button>
+    </div>
+    <script>
+      window.onload = () => {
+        let btn = document.querySelector("#btn");
+        let Name = document.querySelector(".name");
+        let Num = document.querySelector(".num");
+        let token = sessionStorage.getItem("token");
+        console.log(token);
+        btn.addEventListener("click", () => {
+          let num = Num.value;
+          let name = Name.value;
+          $.ajax({
+            type: "GET",
+            url: `http://47.94.90.140:8888/api/updateId?username=${name}&userId=${num}`,
+            dataType: "json",
+            beforeSend(request) {
+              request.setRequestHeader("authorization", token);
+            },
+            success(data) {
+              console.log(data);
+              let { code, mag } = data;
+              alert(data.msg);
+            },
+          });
+        });
+      };
+    </script>
+  </body>
+</html>

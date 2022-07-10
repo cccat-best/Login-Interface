@@ -1,0 +1,154 @@
+*{
+    outline: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url(https://s4.ax1x.com/2022/01/21/7WVrPH.png);
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    min-height: 700px;
+
+    //固定位置
+    .biggest{
+      position: absolute;
+      margin-top: 125px;
+      left: 50%;
+      transform: translate(-50%,0);
+
+
+    //翻转体效果
+      .turn{
+        background-color: transparent;
+        height: 335px;
+        width: 360px;
+        perspective: 800px;
+        .over{
+            height: 100%;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: all 1.8s ease;
+           
+          form{
+              position: absolute;
+              background-color: rgba(255, 255, 255, .2);
+              height: 100%;
+              transform-style: preserve-3d;
+              border-radius: 30px;
+              backdrop-filter: blur(3px);
+              border-left: 2px solid rgba(255, 255, 255, .3);
+              border-top: 2px solid rgba(255, 255, 255, .3);
+              box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+              backface-visibility: hidden;
+              h1{
+                padding: 0;
+               margin: 6%;
+             }
+          
+          }
+        }
+    }
+
+    //切换按钮框效果
+    .switch{
+      background-color: rgba(255, 255, 255, .2);
+      border-radius: 25px;
+      backdrop-filter: blur(3px);
+      border-left: 2px solid rgba(255, 255, 255, .3);
+      border-top: 2px solid rgba(255, 255, 255, .3);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+      width: 360px;
+      height: 100px;
+      margin-top: 30px;
+       h2{
+        padding-bottom: 1px;
+        margin: 4px;
+        color: white;
+        opacity: 0.7;
+        font-weight: 400;
+        font-size: 25px;
+      }
+     #change{
+      background-color: rgb(254, 191, 204,.1);
+      border-radius: 16px;
+      border: transparent;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .1);
+        font-size-adjust: none;
+     }
+    }
+  }
+}
+
+//背面注册页面
+.sign{
+    transform: rotateY(180deg);
+}
+
+
+//input框效果
+input{
+  width: 250px;
+  height:47px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 16px;
+  padding-left: 10px;
+  background-color: transparent;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,1px);
+  backdrop-filter: blur(3px);
+  border-left: 2px solid rgba(255, 255, 255, .3);
+  border-top: 2px solid rgba(255, 255, 255, .3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .1);
+  color: slategrey;
+  font-size: 18px;
+  opacity: 0.8;
+}
+::placeholder{
+    padding-left: 7px;
+    color: white;
+    opacity: 0.9;
+    font-size: 16px;
+  }
+.in:focus,.in:hover{
+    border: none;
+    background-color: rgba(255, 255, 255, .1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+    border-right: 2px solid rgba(255, 255, 255, .3);
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+    box-shadow:inset 2px 2px 2px rgba(0, 0, 0, .2);
+  }
+input:-internal-autofill-selected {
+  -webkit-text-fill-color: slategrey !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+
+//button按钮效果
+.btn{
+  background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    opacity: 0.9;
+    height: 44px;
+    width: 200px;
+}
+.btn:active{
+  border: none;
+  background-color: rgba(255, 255, 255, .1);
+  border-right: 2px solid rgba(255, 255, 255, .3);
+  border-bottom: 2px solid rgba(255, 255, 255, .3);
+  box-shadow:inset 2px 2px 2px rgba(0, 0, 0, .2);
+}
+
+
+
+
+
+
